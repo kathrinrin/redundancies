@@ -41,16 +41,16 @@ public class RedundancyChecker {
 	private static OWLReasoner reasoner;
 
 	private static boolean doAll = false;
-	private static boolean doList = true;
-	private static boolean doConcept = false;
+	private static boolean doList = false;
+	private static boolean doConcept = true;
 
 	private static boolean doRule1 = true;
 	private static boolean doRule2 = true;
 	private static boolean doRule3 = true;
 	private static boolean doRule4 = true;
 
-	private static boolean saveManipulatedOntology = true;
-	private static boolean exhaustiveSearch = false;
+	private static boolean saveManipulatedOntology = false;
+	private static boolean exhaustiveSearch = true;
 	private static boolean doSuperClasses = true;
 
 	private static boolean printSemanticType = true;

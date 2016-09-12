@@ -6,9 +6,7 @@ The classes to reproduce the experiments described in the paper "Intra-Axiom Red
 
 
 
-
-- redundancy.RedundancyChecker
--------------------------------
+**redundancy.RedundancyChecker**
 
 Runtime: several minutes for the list of concepts that must be redundant, ca. 6 hours for all concepts regarding supertypes, and ca. 12 hours with exhaustive search. 
 Input: ontologies/res_StatedOWLF_INT_20120731.owlf; results/EquivalentSubconceptsAll.txt (for doList) 
@@ -21,8 +19,7 @@ Returns either only the first explanation per redundancy, or all explanations.
 
 
 
-- util.Util
-------------
+**util.Util**
 
 Input: -
 Output: -
@@ -31,8 +28,7 @@ The Util class contains useful methods.
 
 
 
-CornetsEquivalenceMethod
--------------------------
+**CornetsEquivalenceMethod**
 
 Runtime: several minutes, ca. 2 hours with Pellet
 Input: ontologies/res_StatedOWLF_INT_20120731.owlf
@@ -43,8 +39,7 @@ Can be run with Pellet to generate explanations for non-equivalent files (needs 
 
 
 
-- ValidateRedundantConceptsCornet
-----------------------------------
+**ValidateRedundantConceptsCornet**
 
 Runtime: several minutes
 Input: ontologies/res_StatedOWLF_INT_20120731.owlf; results/RedundantConceptsRegarding.txt
@@ -55,8 +50,7 @@ This list can be taken as input for the RedundancyChecker (doList)
 
 
 
-Final notes 
------------
+**Final notes**
 
 - All classes should be run with sufficient heap space (-Xmx2G) 
 - Optimizations to all programs would be welcome 
