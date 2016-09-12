@@ -50,7 +50,7 @@ public class RedundancyChecker {
 	private static boolean doRule4 = true;
 
 	private static boolean saveManipulatedOntology = false;
-	private static boolean exhaustiveSearch = true;
+	private static boolean exhaustiveSearch = false;
 	private static boolean doSuperClasses = true;
 
 	private static boolean printSemanticType = true;
@@ -114,7 +114,7 @@ public class RedundancyChecker {
 			long start = System.currentTimeMillis();
 
 			File ontologyfile = new File(
-					"ontologies/res_StatedOWLF_INT_20120731.owlf");
+					"ontologies/SnomedCT_Release_INT_20120731_mini.owlf");
 
 			ontology = manager.loadOntologyFromOntologyDocument(ontologyfile);
 			Util.setOntology(ontology);
@@ -194,7 +194,7 @@ public class RedundancyChecker {
 
 			if (doConcept) {
 				OWLClass classOfInterest = datafactory.getOWLClass(IRI
-						.create("http://www.ihtsdo.org/SCT_193699007"));
+						.create("http://www.ihtsdo.org/SCT_47324001"));
 				isConceptRedundant(classOfInterest);
 			}
 
@@ -326,6 +326,11 @@ public class RedundancyChecker {
 
 			OWLClassExpression superClassExpression = Util
 					.getOWLClassExpressionFromClass(highClass);
+			
+			
+			System.out.println(highClass);
+			
+			
 
 			if (superClassExpression.getClassExpressionType().equals(
 					ClassExpressionType.OBJECT_INTERSECTION_OF)) {

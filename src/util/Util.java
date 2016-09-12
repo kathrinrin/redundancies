@@ -272,6 +272,11 @@ public class Util {
 
 		String annotations = owlClass.getAnnotationAssertionAxioms(ontology)
 				.toString();
+		
+		System.out.println(owlClass);
+		System.out.println(annotations);
+
+		
 
 		String typeString = annotations.substring(
 				annotations.lastIndexOf(" (") + 2,
